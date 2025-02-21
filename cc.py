@@ -2,13 +2,9 @@
 
 from openai import OpenAI
 
-# -------------------------------
-# 1. Configuration
-# -------------------------------
-# Replace with your actual DeepSeek API key.
-api_key = ""
 
-# DeepSeek uses the OpenAI SDK format but with a custom base URL.
+api_key = "xxxx"
+
 client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
 
 # -------------------------------
@@ -19,7 +15,7 @@ def get_deepseek_response(user_input):
     Sends a chat request to DeepSeek's API and returns the chatbot response.
     """
     response = client.chat.completions.create(
-        model="deepseek-chat",  # Use the specified model name.
+        model="deepseek-chat",  # Use the model name.
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": user_input}
