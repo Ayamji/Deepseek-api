@@ -2,7 +2,7 @@ import requests
 import json
 
 
-API_KEY = "xxx"
+API_KEY = "123456xxxx"
 
 
 API_URL = "https://api.deepseek.com"
